@@ -7,7 +7,7 @@ class File(object):
     def _get_lines(self):
         with open(self.filename, 'r') as f:
             for line in f:
-                self.lines.append(line)
+                self.lines.append(line.rstrip('\n'))
 
     def get_strings(self) -> list:
         if not self.lines:
@@ -18,6 +18,9 @@ class File(object):
         if not self.lines:
             return []
         return [int(n) for n in self.lines]
+
+    def get_line(self, n) -> str:
+        return self.lines[n]
 
     def close(self):
         self.lines = []
