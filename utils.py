@@ -32,3 +32,6 @@ class File(object):
         self.lines = []
         self.filename = ''
 
+    def len(self):
+        return len(self.lines)
+

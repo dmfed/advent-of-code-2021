@@ -8,7 +8,6 @@ def power_consumption(l: list):
 def calculate_common(l: list):
     counter = [0 for _ in range(len(l[0]))]
     for line in l:
-        line = line.rstrip('\n')
         for i in range(len(line)):
             if line[i] == '1':
                 counter[i] += 1

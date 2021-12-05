@@ -89,7 +89,7 @@ if __name__ == '__main__':
     m = Map(x, y)
     for x1, y1, x2, y2 in coords:
         m.add_line(x1, y1, x2, y2)
-    # print(m)
+    print(m)
     print(m.calculate_points(2))
 
 
