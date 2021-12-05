@@ -22,6 +22,12 @@ class File(object):
     def get_line(self, n) -> str:
         return self.lines[n]
 
+    def get_coords(self) -> list:
+        pairs = [line.split(' -> ') for line in self.lines]
+        for i in range(len(pairs)):
+            pairs[i] = tuple(int(n) for n in pairs[i][0].split(',')) + tuple(int(n) for n in pairs[i][1].split(',')) 
+        return pairs
+
     def close(self):
         self.lines = []
         self.filename = ''
