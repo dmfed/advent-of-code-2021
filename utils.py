@@ -19,6 +19,9 @@ class File(object):
             return []
         return [int(n) for n in self.lines]
 
+    def get_ints_line(self) -> list:
+        return [int(n) for n in self.lines[0].split(',')]
+
     def get_line(self, n) -> str:
         return self.lines[n]
 
